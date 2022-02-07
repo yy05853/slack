@@ -17,9 +17,10 @@ public class Community {
 		if(Objects.isNull(hostId)) {
 			throw new Exception();
 		}
-	}
-
-	public Community(String communityName) {
+		this.communityId = "1";
+		this.communityName = communityName;
+		this.hostIdList.add(hostId);
+		this.channelIdList.add("general");
 		
 	}
 
