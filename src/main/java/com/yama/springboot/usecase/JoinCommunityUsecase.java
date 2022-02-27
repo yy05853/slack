@@ -10,7 +10,7 @@ public class JoinCommunityUsecase {
 	@Autowired
 	CommunityRepository communityRepository;
 	
-	public void inviteToCommunity(String communityId, 
+	public void joinToCommunity(String communityId, 
 			String guestId) {
 		Community community = communityRepository.getById(communityId);
 		community.getGuestIdList().add(guestId);
