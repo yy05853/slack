@@ -15,7 +15,7 @@ public class Comment {
     private LocalDateTime postDateTime;
     private List<String> mentionId;
 
-    public Comment(String userId, String content, List<String> mentionId) throws Exception{
+    public Comment(String userId, String content, List<String> mentionIdList) throws Exception{
         if(Objects.isNull(userId)){
             throw new Exception();
         }
@@ -23,7 +23,7 @@ public class Comment {
         this.userId = userId;
         this.content = content;
         this.postDateTime = LocalDateTime.now();
-        this.mentionId = new ArrayList<String>(mentionId);
+        this.mentionId = new ArrayList<String>(mentionIdList);
     }
 
 }
