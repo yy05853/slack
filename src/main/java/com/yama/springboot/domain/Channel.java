@@ -1,5 +1,6 @@
 package com.yama.springboot.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,6 +19,7 @@ public class Channel {
 			throw new Exception();
 		}
 		this.channelId = "1";
+		this.hostIdList = new ArrayList<String>();
 		this.hostIdList.add(hostId);
 		this.channelName = channelName;
 

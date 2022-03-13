@@ -1,17 +1,19 @@
 package com.yama.springboot.usecase;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.yama.springboot.Repository.ChannelRepository;
 import com.yama.springboot.domain.Channel;
 
+import lombok.RequiredArgsConstructor;
+
+
+@RequiredArgsConstructor
 public class CreateChannelUsecase {
-	@Autowired
-	ChannelRepository channelRepository;
+
+	private final ChannelRepository channelRepository;
 
 	public void createChannel(
-			String channelId, String hostId) throws Exception {
-		Channel channel = new Channel(channelId, hostId);
+			String channelName, String hostId) throws Exception {
+		Channel channel = new Channel(channelName, hostId);
 		channelRepository.save(channel);
 	}
 }
