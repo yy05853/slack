@@ -9,7 +9,8 @@ public class ChannelRepository {
 	List<Channel> channelList;
 
 	public void save(Channel channel) {
-		// CommunityをテーブルにInsertする
+		// ChannelをテーブルにInsertする
+		channelList.add(channel);
 	}
 
 	public Channel getById(String channelId) {
